@@ -26,7 +26,20 @@ return {
     return {
       autotag = { enable = true },
       context_commentstring = { enable = true, enable_autocmd = false },
+      ensure_installed = {
+        "javascript",
+        "typescript",
+        "tsx",
+        "lua",
+        "vue",
+        "html",
+        "css",
+        "bash",
+        "gitignore",
+        "scss",
+      },
       highlight = {
+        "jsx",
         enable = true,
         disable = function(_, bufnr) return vim.b[bufnr].large_buf end,
       },
