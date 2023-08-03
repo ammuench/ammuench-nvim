@@ -22,4 +22,7 @@ end
 
 require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)
 
-require("user");
+require "user"
+
+-- Lua initialization file
+vim.cmd [[colorscheme nightfly]]
