@@ -24,5 +24,5 @@ require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, f
 
 require "user"
 
--- Lua initialization file
+-- Set theme
 vim.cmd [[colorscheme nightfly]]
