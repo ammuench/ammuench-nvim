@@ -5,6 +5,11 @@ return {
       format_on_save = true, -- enable or disable automatic formatting on save
     },
   },
+  mappings = {
+    n = {
+      ["<leader>L"] = { ":EslintFixAll<cr>", desc = "ESLint Fix All" },
+    },
+  },
   plugins = {
     { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
     {
