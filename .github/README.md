@@ -17,14 +17,14 @@
 </h4>
 
 <p align="center">
-    <a href="https://github.com/AstroNvim/AstroNvim/pulse">
-      <img src="https://img.shields.io/github/last-commit/AstroNvim/AstroNvim?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+    <a href="https://github.com/ammuench/ammuench-astrovim/pulse">
+      <img src="https://img.shields.io/github/last-commit/ammuench/ammuench-astrovim?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
     </a>
-    <a href="https://github.com/AstroNvim/AstroNvim/releases/latest">
-      <img src="https://img.shields.io/github/v/release/AstroNvim/AstroNvim?style=for-the-badge&logo=gitbook&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41"/>
+    <a href="https://github.com/ammuench/ammuench-astrovim/releases/latest">
+      <img src="https://img.shields.io/github/v/release/ammuench/ammuench-astrovim?style=for-the-badge&logo=gitbook&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41"/>
     </a>
-    <a href="https://github.com/AstroNvim/AstroNvim/stargazers">
-      <img src="https://img.shields.io/github/stars/AstroNvim/AstroNvim?style=for-the-badge&logo=apachespark&color=eed49f&logoColor=D9E0EE&labelColor=302D41"/>
+    <a href="https://github.com/ammuench/ammuench-astrovim/stargazers">
+      <img src="https://img.shields.io/github/stars/ammuench/ammuench-astrovim?style=for-the-badge&logo=apachespark&color=eed49f&logoColor=D9E0EE&labelColor=302D41"/>
     </a>
     <img src="https://img.shields.io/endpoint?url=https://waka.mehalter.com/api/compat/shields/v1/mehalter/interval:any/label:AstroNvim&style=for-the-badge&label=wakatime&logo=wakatime&color=a6da95&logoColor=D9E0EE&labelColor=302D41"/>
     <br>
@@ -48,7 +48,7 @@ AstroNvim is an aesthetic and feature-rich neovim config that is extensible and 
 
 ## 🌟 Preview
 
-![Preview Image](https://github.com/AstroNvim/astronvim.github.io/raw/main/static/img/themes/overview.png)
+![Preview Image](https://github.com/ammuench/ammuench-astrovim.github.io/raw/main/static/img/themes/overview.png)
 
 ## ✨ Features
 
@@ -97,7 +97,7 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 #### Clone the repository
 
 ```shell
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+git clone --depth 1 https://github.com/ammuench/ammuench-astrovim ~/.config/nvim
 nvim
 ```
 
@@ -113,7 +113,7 @@ Rename-Item -Path $env:LOCALAPPDATA\nvim-data -NewName $env:LOCALAPPDATA\nvim-da
 #### Clone the repository
 
 ```pwsh
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim $env:LOCALAPPDATA\nvim
+git clone --depth 1 https://github.com/ammuench/ammuench-astrovim $env:LOCALAPPDATA\nvim
 nvim
 ```
 
