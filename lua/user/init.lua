@@ -8,6 +8,7 @@ return {
   mappings = {
     n = {
       ["<leader>L"] = { ":EslintFixAll<cr>", desc = "ESLint Fix All" },
+      ["<leader>W"] = { ":noa w<cr>", desc = "Save w/o Formatting" },
     },
   },
   plugins = {
