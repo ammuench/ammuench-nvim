@@ -9,6 +9,10 @@ return {
     n = {
       ["<leader>L"] = { ":EslintFixAll<cr>", desc = "ESLint Fix All" },
       ["<leader>W"] = { ":noa w<cr>", desc = "Save w/o Formatting" },
+      ["<leader>ff"] = {
+        "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
+        desc = "Find Files",
+      },
     },
   },
   plugins = {
