@@ -28,6 +28,7 @@ return {
           "tailwindcss",
           "volar",
           "vtsls",
+          "prismals",
         },
       },
     },

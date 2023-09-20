@@ -37,6 +37,7 @@ return {
         "bash",
         "gitignore",
         "scss",
+        "prisma",
       },
       highlight = {
         "jsx",
