@@ -2,6 +2,7 @@ return {
   lsp = {
     servers = {},
     formatting = {
+      timeout_ms = 7500,
       format_on_save = true, -- enable or disable automatic formatting on save
     },
   },
@@ -46,6 +47,5 @@ return {
         }
       end,
     },
-    { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" },
   },
 }
