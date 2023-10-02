@@ -3,6 +3,7 @@ return {
     servers = {},
     formatting = {
       format_on_save = true, -- enable or disable automatic formatting on save
+      timeout_ms = 15000,
     },
   },
   mappings = {
@@ -40,7 +41,6 @@ return {
           ensure_installed = {
             "stylua",
             "eslint",
-            "prettierd",
           },
         }
       end,

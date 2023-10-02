@@ -59,7 +59,7 @@ return {
       {
         "jay-babu/mason-null-ls.nvim",
         cmd = { "NullLsInstall", "NullLsUninstall" },
-        opts = { handlers = {} },
+        opts = { handlers = {}, setup = true },
       },
     },
     event = "User AstroFile",
