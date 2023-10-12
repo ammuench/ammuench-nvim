@@ -29,7 +29,7 @@ return {
           "lua_ls",
           "tailwindcss",
           "volar",
-          "vtsls",
+          "tsserver",
           "prismals",
         },
       },
