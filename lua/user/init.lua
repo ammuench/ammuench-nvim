@@ -2,6 +2,7 @@ return {
   lsp = {
     servers = {},
     formatting = {
+      timeout_ms = 7500,
       format_on_save = true, -- enable or disable automatic formatting on save
       timeout_ms = 15000,
     },
@@ -9,6 +10,7 @@ return {
   mappings = {
     n = {
       ["<leader>L"] = { ":EslintFixAll<cr>", desc = "ESLint Fix All" },
+      ["<leader>R"] = { ":LspRestart<cr>", desc = "Reload LSP" },
       ["<leader>W"] = { ":noa w<cr>", desc = "Save w/o Formatting" },
       ["<leader>ff"] = {
         "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
@@ -28,7 +30,7 @@ return {
           "lua_ls",
           "tailwindcss",
           "volar",
-          "vtsls",
+          "tsserver",
           "prismals",
         },
       },
@@ -45,6 +47,5 @@ return {
         }
       end,
     },
-    { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" },
   },
 }
