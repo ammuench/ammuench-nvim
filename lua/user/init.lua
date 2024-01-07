@@ -2,7 +2,7 @@ return {
   lsp = {
     servers = {},
     formatting = {
-      timeout_ms = 7500,
+      timeout_ms = 15000,
       format_on_save = true, -- enable or disable automatic formatting on save
     },
   },
@@ -42,7 +42,6 @@ return {
           ensure_installed = {
             "stylua",
             "eslint",
-            "prettierd",
           },
         }
       end,
