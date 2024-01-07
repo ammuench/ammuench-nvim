@@ -15,6 +15,8 @@ return {
         "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
         desc = "Find Files",
       },
+      ["<C-d>"] = { "<C-d>zz" },
+      ["<C-u>"] = { "<C-u>zz" },
     },
   },
   plugins = {
