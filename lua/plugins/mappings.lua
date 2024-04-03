@@ -6,13 +6,13 @@ return {
       mappings = {
         -- first key is the mode
         n = {
-        ["<leader>W"] = { ":noa w<cr>", desc = "Save w/o Formatting" },
-        ["<leader>ff"] = {
-          "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
-          desc = "Find Files",
-        },
-        ["<C-d>"] = { "<C-d>zz" },
-        ["<C-u>"] = { "<C-u>zz" },
+          ["<leader>W"] = { ":noa w<cr>", desc = "Save w/o Formatting" },
+          ["<leader>ff"] = {
+            "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
+            desc = "Find Files",
+          },
+          ["<C-d>"] = { "<C-d>zz" },
+          ["<C-u>"] = { "<C-u>zz" },
         },
         t = {
           -- setting a mapping to false will disable it
@@ -29,18 +29,15 @@ return {
         n = {
           -- this mapping will only be set in buffers with an LSP attached
           ["<leader>L"] = { ":EslintFixAll<cr>", desc = "ESLint Fix All" },
+          ["<leader>F"] = { ":Neoformat<cr>", desc = "Format Buffer w/ Neoformat" },
           ["<leader>R"] = { ":LspRestart<cr>", desc = "Reload LSP" },
           K = {
-            function()
-              vim.lsp.buf.hover()
-            end,
+            function() vim.lsp.buf.hover() end,
             desc = "Hover symbol details",
           },
           -- condition for only server with declaration capabilities
           gD = {
-            function()
-              vim.lsp.buf.declaration()
-            end,
+            function() vim.lsp.buf.declaration() end,
             desc = "Declaration of current symbol",
             cond = "textDocument/declaration",
           },
@@ -49,4 +46,3 @@ return {
     },
   },
 }
-
