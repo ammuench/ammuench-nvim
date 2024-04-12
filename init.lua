@@ -17,32 +17,4 @@ end
 
 require "lazy_setup"
 require "polish"
-
---volar setup
--- local mason_registry = require "mason-registry"
--- local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
---   .. "/node_modules/@vue/language-server"
---
--- local lspconfig = require "lspconfig"
---
--- ---@diagnostic disable-next-line: missing-fields
--- lspconfig.tsserver.setup {
---   init_options = {
---     plugins = {
---       {
---         name = "@vue/typescript-plugin",
---         location = "/home/amuench/.local/share/pnpm/global/5/node_modules/@vue/typescript-plugin",
---         languages = { "vue" },
---       },
---     },
---   },
--- }
---
--- ---@diagnostic disable-next-line: missing-fields
--- lspconfig.volar.setup {
---   init_options = {
---     vue = {
---       hybridMode = false,
---     },
---   },
--- }
+-- require "volar-init"
