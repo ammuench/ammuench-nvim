@@ -31,6 +31,8 @@ return {
           ["<leader>L"] = { ":EslintFixAll<cr>", desc = "ESLint Fix All" },
           ["<leader>F"] = { ":Neoformat<cr>", desc = "Format Buffer w/ Neoformat" },
           ["<leader>R"] = { ":LspRestart<cr>", desc = "Reload LSP" },
+          ["<leader>uI"] = { ":IBLToggle<cr>", desc = "Toggle Rainbow Indents" },
+          ["<leader>uO"] = { ":IBLToggleScope<cr>", desc = "Toggle Scope Highlights" },
           K = {
             function() vim.lsp.buf.hover() end,
             desc = "Hover symbol details",
