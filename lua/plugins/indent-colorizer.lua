@@ -1,16 +1,38 @@
 return {
   {
-    "HiPhish/rainbow-delimiters.nvim",
-    main = "rainbow_delimiters",
-    opts = {},
-    config = function() require("rainbow-delimiters.setup").setup {} end,
+    "AstroNvim/astroui",
+    ---@param opts AstroUIOpts
+    opts = function(_, opts)
+      if not opts.highlights then opts.highlights = {} end
+      local init_highlights = opts.highlights.init or {}
+      opts.highlights.init = function(colorscheme)
+        if type(init_highlights) == "function" then init_highlights = init_highlights(colorscheme) end
+        for hlgroup, fallback in pairs {
+          RainbowRed = { fg = "#E06C75" },
+          RainbowYellow = { fg = "#E5C07B" },
+          RainbowBlue = { fg = "#61AFEF" },
+          RainbowOrange = { fg = "#D19A66" },
+          RainbowGreen = { fg = "#98C379" },
+          RainbowViolet = { fg = "#C678DD" },
+          RainbowCyan = { fg = "#56B6C2" },
+          RainbowRedIndent = { fg = "#6e171e" },
+          RainbowYellowIndent = { fg = "#765517" },
+          RainbowBlueIndent = { fg = "#0c497a" },
+          RainbowOrangeIndent = { fg = "#603d1d" },
+          RainbowGreenIndent = { fg = "#3b5727" },
+          RainbowVioletIndent = { fg = "#5a1b6d" },
+          RainbowCyanIndent = { fg = "#1e4c52" },
+        } do
+          if vim.fn.hlexists(hlgroup) ~= 1 then init_highlights[hlgroup] = fallback end
+        end
+        return init_highlights
+      end
+    end,
   },
   {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    opts = {},
-    config = function()
-      local highlight = {
+    "HiPhish/rainbow-delimiters.nvim",
+    opts = {
+      highlight = {
         "RainbowRed",
         "RainbowYellow",
         "RainbowBlue",
@@ -18,45 +40,25 @@ return {
         "RainbowGreen",
         "RainbowViolet",
         "RainbowCyan",
-      }
-
-      local highlightIndent = {
-        "RainbowRedIndent",
-        "RainbowYellowIndent",
-        "RainbowBlueIndent",
-        "RainbowOrangeIndent",
-        "RainbowGreenIndent",
-        "RainbowVioletIndent",
-        "RainbowCyanIndent",
-      }
-
-      local hooks = require "ibl.hooks"
-      -- create the highlight groups in the highlight setup hook, so they are reset
-      -- every time the colorscheme changes
-      hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-        vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
-        vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
-        vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
-        vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
-        vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
-        vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
-        vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
-        vim.api.nvim_set_hl(0, "RainbowRedIndent", { fg = "#6e171e" })
-        vim.api.nvim_set_hl(0, "RainbowYellowIndent", { fg = "#765517" })
-        vim.api.nvim_set_hl(0, "RainbowBlueIndent", { fg = "#0c497a" })
-        vim.api.nvim_set_hl(0, "RainbowOrangeIndent", { fg = "#603d1d" })
-        vim.api.nvim_set_hl(0, "RainbowGreenIndent", { fg = "#3b5727" })
-        vim.api.nvim_set_hl(0, "RainbowVioletIndent", { fg = "#5a1b6d" })
-        vim.api.nvim_set_hl(0, "RainbowCyanIndent", { fg = "#1e4c52" })
-      end)
-
-      vim.g.rainbow_delimiters = { highlight = highlight }
-      require("ibl").setup {
-        scope = { highlight = highlight, char = "┃" },
-        indent = { highlight = highlightIndent, char = "╎" },
-      }
-
-      hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
-    end,
+      },
+    },
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    opts = {
+      scope = { char = "▏", show_start = true, show_end = true },
+      indent = {
+        char = "╎",
+        highlight = {
+          "RainbowRedIndent",
+          "RainbowYellowIndent",
+          "RainbowBlueIndent",
+          "RainbowOrangeIndent",
+          "RainbowGreenIndent",
+          "RainbowVioletIndent",
+          "RainbowCyanIndent",
+        },
+      },
+    },
   },
 }
