@@ -12,4 +12,5 @@ return {
   -- these packs can set up things such as Treesitter, Language Servers, additional language specific plugins, and more!
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
+  { import = "astrocommunity.pack.go" },
 }
