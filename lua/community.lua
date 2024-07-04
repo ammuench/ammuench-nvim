@@ -13,4 +13,5 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.vue" },
 }
