@@ -13,7 +13,7 @@ return {
         "cssls",
         "html",
         "jsonls",
-        "tsserver",
+        -- "tsserver",
       })
     end,
   },
