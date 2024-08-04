@@ -28,7 +28,33 @@ return {
       mappings = {
         n = {
           -- this mapping will only be set in buffers with an LSP attached
-          ["<leader>L"] = { ":EslintFixAll<cr>", desc = "ESLint Fix All" },
+          ["<leader>L"] = {
+            ":EslintFixAll<cr>",
+            desc = "ESLint Fix All",
+            cond = function()
+              local eslintFile = vim.fs.find({ "eslint" }, { path = vim.fn.getcwd() })
+
+              if next(eslintFile) == nil then
+                return false
+              else
+                return true
+              end
+            end,
+          },
+          ["<leader>B"] = {
+            ":BiomeCheckCurrentFile<cr>",
+            desc = "Biome Check",
+            cond = function()
+              local biomeConfig = vim.fs.find({ "biome.json" }, { path = vim.fn.getcwd() })
+
+              if next(biomeConfig) == nil then
+                return false
+              else
+                return true
+              end
+            end,
+          },
+
           ["<leader>F"] = { ":Neoformat<cr>", desc = "Format Buffer w/ Neoformat" },
           ["<leader>R"] = { ":LspRestart<cr>", desc = "Reload LSP" },
           ["<leader>uI"] = { ":IBLToggle<cr>", desc = "Toggle Rainbow Indents" },
