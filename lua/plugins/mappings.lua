@@ -29,7 +29,7 @@ return {
         n = {
           -- this mapping will only be set in buffers with an LSP attached
           ["<leader>L"] = { ":EslintFixAll<cr>", desc = "ESLint Fix All" },
-          ["<leader>B"] = { ":!biome format % --write<cr>:e<cr>", desc = "Format Buffer w/ Biome" },
+          ["<leader>B"] = { ":Neoformat biome format<cr>", desc = "Format Buffer w/ Biome" },
           ["<leader>F"] = { ":Neoformat<cr>", desc = "Format Buffer w/ Neoformat" },
           ["<leader>R"] = { ":LspRestart<cr>", desc = "Reload LSP" },
           ["<leader>uI"] = { ":IBLToggle<cr>", desc = "Toggle Rainbow Indents" },
