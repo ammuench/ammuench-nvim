@@ -40,11 +40,12 @@ return {
   },
   opts = {
     default_format_opts = { lsp_format = "fallback" },
-    format_on_save = function(bufnr)
-      if vim.g.autoformat == nil then vim.g.autoformat = true end
-      local autoformat = vim.b[bufnr].autoformat
-      if autoformat == nil then autoformat = vim.g.autoformat end
-      if autoformat then return { timeout_ms = 500 } end
-    end,
+    format_on_save = false,
+    -- format_on_save = function(bufnr)
+    --   if vim.g.autoformat == nil then vim.g.autoformat = true end
+    --   local autoformat = vim.b[bufnr].autoformat
+    --   if autoformat == nil then autoformat = vim.g.autoformat end
+    --   if autoformat then return { timeout_ms = 500 } end
+    -- end,
   },
 }
