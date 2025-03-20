@@ -8,6 +8,7 @@ return {
       opts.highlights.init = function(colorscheme)
         if type(init_highlights) == "function" then init_highlights = init_highlights(colorscheme) end
         for hlgroup, fallback in pairs {
+          NotifyBackground = { bg = "#1e222a" },
           RainbowRed = { fg = "#E06C75" },
           RainbowYellow = { fg = "#E5C07B" },
           RainbowBlue = { fg = "#61AFEF" },
