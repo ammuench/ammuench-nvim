@@ -1,3 +1,5 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE ONCE WE UPDATE THE PACK FOR SNACKS.NVIM
+
 return {
   {
     "AstroNvim/astroui",

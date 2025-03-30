@@ -1,3 +1,5 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE WHEN WE RE-ADD IN DENO
+
 return {
   {
     "AstroNvim/astrolsp",
