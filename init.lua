@@ -17,3 +17,6 @@ end
 
 require "lazy_setup"
 require "polish"
+
+vim.cmd("let g:nvim_ghost_use_script = 1")
+vim.cmd("let g:nvim_ghost_python_executable = '/opt/homebrew/bin/python3'")
