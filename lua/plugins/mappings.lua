@@ -1,3 +1,4 @@
+
 return {
   {
     "AstroNvim/astrocore",
@@ -6,11 +7,10 @@ return {
       mappings = {
         -- first key is the mode
         n = {
-          ["<leader>W"] = { ":noa w<cr>", desc = "Save w/o Formatting" },
-          ["<leader>ff"] = {
-            "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
-            desc = "Find Files",
-          },
+          -- ["<leader>ff"] = {
+          --   "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
+          --   desc = "Find Files",
+          -- },
           ["<C-d>"] = { "<C-d>zz" },
           ["<C-u>"] = { "<C-u>zz" },
         },
@@ -56,8 +56,8 @@ return {
           },
 
           ["<leader>R"] = { ":LspRestart<cr>", desc = "Reload LSP" },
-          ["<leader>uI"] = { ":IBLToggle<cr>", desc = "Toggle Rainbow Indents" },
-          ["<leader>uO"] = { ":IBLToggleScope<cr>", desc = "Toggle Scope Highlights" },
+          -- ["<leader>uI"] = { ":IBLToggle<cr>", desc = "Toggle Rainbow Indents" },
+          -- ["<leader>uO"] = { ":IBLToggleScope<cr>", desc = "Toggle Scope Highlights" },
           K = {
             function() vim.lsp.buf.hover() end,
             desc = "Hover symbol details",
