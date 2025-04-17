@@ -8,15 +8,15 @@ return {
       -- Make sure to use the names found in `:Mason`
       ensure_installed = {
         -- install language servers
-        "astro-language-server",
+        -- "astro-language-server",
         "css-lsp",
-        "gopls",
+        -- "gopls",
         "html-lsp",
         "json-lsp",
         "lua-language-server",
         "tailwindcss-language-server",
         "vtsls",
-        "vue-language-server",
+        -- "vue-language-server",
 
         -- install linters, formatters
         "biome",
