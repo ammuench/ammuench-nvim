@@ -42,11 +42,25 @@ return {
     default_format_opts = { lsp_format = "fallback" },
     format_on_save = false,
     formatters_by_ft = {
+      html = function(bufnr)
+        local prettierCommands = require("conform").get_formatter_info("prettierd", bufnr).cwd
+
+        if prettierCommands ~= nil then
+          return {
+            "prettier",
+            "prettierd",
+            stop_after_first = true,
+          }
+        else
+          return { "html" }
+        end
+      end,
       vue = {
         "prettier",
         "prettierd",
         stop_after_first = true,
       },
     },
+    log_level = vim.log.levels.DEBUG,
   },
 }
