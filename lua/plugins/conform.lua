@@ -39,9 +39,28 @@ return {
     },
   },
   opts = {
+    log_level = vim.log.levels.DEBUG,
     default_format_opts = { lsp_format = "fallback" },
     format_on_save = false,
     formatters_by_ft = {
+      typescriptreact = {
+        "biome",
+        "prettierd",
+        "prettier",
+        "eslintd",
+        "eslint",
+        "vtsls",
+        stop_after_first = true,
+      },
+      typescript = {
+        "biome",
+        "prettierd",
+        "prettier",
+        "eslintd",
+        "eslint",
+        "vtsls",
+        stop_after_first = true,
+      },
       vue = {
         "prettier",
         "prettierd",

@@ -17,3 +17,5 @@ end
 
 require "lazy_setup"
 require "polish"
+
+vim.lsp.set_log_level("debug")
